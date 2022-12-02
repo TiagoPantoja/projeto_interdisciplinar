@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados do Cálculo</title>
+</head>
+<body>
+    <h1>Resultados do Cálculo</h1>
+    {% block content %}
+    <form method="get">
+        <h3>Dados de entrada:</h3>
+	    <h5>{{ dados_entrada }}</h5>
+        <br/>
+        <h5>{{ resposta_calculo }}</h5>
+	    <h4><input type="submit" value="Voltar para a página inicial"/></h4>
+
+    </form>
+    {% endblock %}
+</body>
+</html>

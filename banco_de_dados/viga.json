@@ -1,0 +1,15 @@
+[{
+  "_id": 1,
+  "carga": 10,
+  "comprimento": 11,
+  "base": 8,
+  "altura": 10,
+  "resistencia_material": 5
+},{
+  "_id": 2,
+  "carga": 20,
+  "comprimento": 8,
+  "base": 5,
+  "altura": 19,
+  "resistencia_material": 1
+}]

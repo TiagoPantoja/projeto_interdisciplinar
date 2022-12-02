@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/static/reset.css"> -->
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Análise de Viga em Balanço</title>
+</head>
+<body>
+    <h1>Bem vindo ao Calculador de carga sobre Viga</h1>
+    <script>
+        function resetar_input(){
+            document.getElementById('input_carga').value='';
+            document.getElementById('input_comprimento').value='';
+            document.getElementById('input_base').value='';
+            document.getElementById('input_altura').value='';
+            document.getElementById('input_resistencia').value='';
+            }
+    </script>
+    {% block content %}
+    <form method="post">
+	    <h4>Digite o valor da Carga(kN/m): </h4>
+	    <h4><input type="number" name="input_carga" min="0.01" step="0.01"/></h4>
+
+        <h4>Digite o Comprimento(m) da viga: </h4>
+	    <h4><input type="number" name="input_comprimento" min="0.01" step="0.01"/></h4>
+
+        <h4>Digite o valor da Base(cm): </h4>
+	    <h4><input type="number" name="input_base" min="0.01" step="0.01"/></h4>
+
+        <h4>Digite a Altura(cm) da viga: </h4>
+	    <h4><input type="number" name="input_altura" min="0.01" step="0.01"/></h4>
+
+        <h4>Digite a Resistência do Material(MPa): </h4>
+	    <h4><input type="number" name="input_resistencia" min="0.01" step="0.01"/></h4>
+
+        <!-- <h4><input type="button" value="Limpar entrada de dados" onclick="resetar_input()"></h4> -->
+	    <h4><input type="submit" value="Confirmar dados" onsubmit="resetar_input"/></h4>
+
+
+</form>
+{% endblock %}
+</form>
+</body>
+</html>
