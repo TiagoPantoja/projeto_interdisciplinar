@@ -9,11 +9,10 @@
 <body>
     <h1>Resultados do Cálculo</h1>
     {% block content %}
-    <form method="get">
-        <h3>Dados de entrada:</h3>
-	    <h5>{{ dados_entrada }}</h5>
-        <br/>
-        <h5>{{ resposta_calculo }}</h5>
+    <form method="post">
+        <h2>Dados de entrada:</h2>
+        <h3>{{ dados_entrada }}</h3>
+        <h3>{{ resultado }}</h3>
 	    <h4><input type="submit" value="Voltar para a página inicial"/></h4>
 
     </form>

@@ -37,6 +37,9 @@ def mostrar_dados_viga(id_viga_requerida: int) -> str:
             texto += f"{field}: {valor}\n"
     return texto
 
+def mostrar_dict_viga(id_viga_requerida: int ) -> dict[str, float]:
+    return documento_viga.find_one({"_id": id_viga_requerida})
+
 
 def deletar_viga(carga: float, comprimento: float, base: float, altura: float, resistencia_material: float) -> str:
     dados: dict[str, float] = {
@@ -75,6 +78,8 @@ def mostrar_dados_usuario(id_usuario_requerida: int) -> str:
         for field, valor in usuario_query.items():
             texto += f"{field}: {valor}\n"
     return texto
+
+
 
 def deletar_usuario(nome: str, email: str, senha: str) -> str:
     dados: dict[str, str] = {

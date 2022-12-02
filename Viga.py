@@ -73,8 +73,8 @@ class Viga:
         tensao_viga: float = 0.000001 * ((altura_especial_cm * self.analisar_minimo_momento_fletor()) / self._calcular_momento_inercia()) 
         resultado: str = ""
         if tensao_viga <= self.resistencia:
-            resultado = "Tensão na viga: ok!"
+            resultado = "O material possui resistência suficiente para aguentar essa quantidade de tensão"
         else:
-            resultado = "Tensão na viga superior a resistência do material!"
+            resultado = "Tensão na viga é superior a resistência do material!"
         return resultado  
     
